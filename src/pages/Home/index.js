@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
 
-        async function loadFilmes() {
+        async function loadCards() {
             const response = await api.get("character", {
                 params: {
 
@@ -18,12 +18,12 @@ function Home() {
             })
 
             //console.log(response.data.results.slice(0, 10));
-            setCard(response.data.results.slice(0, 10))
+            setCard(response.data.results.slice(0, 6))
             setLoading(false);
 
         }
 
-        loadFilmes();
+        loadCards();
 
     }, [])
 
@@ -32,7 +32,7 @@ function Home() {
     if (loading) {
         return (
             <div className="loading">
-                <h2>Carregando filmes...</h2>
+                <h2>Carregando cartão...</h2>
             </div>
         )
     }
@@ -46,7 +46,12 @@ function Home() {
                         <img src={`${card.image}`} alt={card.name} />
                         <div>
                             <h2>{card.name}</h2>
-                            <h3>{card.origin.name}</h3>
+
+                            <div className='status'>
+                                <span className={card.status}></span>
+                                <h3>{card.status} - {card.species}</h3>
+                            </div>
+                            
                             <p>Status: {card.status}</p>
                             <p>Specie: {card.species}</p>
 
