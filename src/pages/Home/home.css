@@ -8,7 +8,8 @@ body{
     display: flex;
     align-items: center;
     gap: 0 8px;
-    margin-top: -16px;
+    margin-top: -8px;
+    justify-content: start;
 }
 
 .Alive{
@@ -40,7 +41,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     place-items: center;
-    height: 100vh;
+    
     flex-basis: 75%;
     gap: 20px 45px;
     justify-content: center;
@@ -68,7 +69,7 @@ body{
 }
 
 .card h2{
-    font-size: 26px;
+    font-size: 4vh;
     font-weight: 400;
     margin-top: 0;
     margin-right: 30px;
@@ -82,6 +83,56 @@ body{
 .card p{
     margin: 0 0 0px;
     opacity: 0.42;
+}
+
+#button{
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.next, .previous{
+    width: 40%;
+
+    font-size: 1.5vw;
+}
+
+.next, .previous{
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(73, 73, 73, 0.5);    
+    color: #fdfcfd;
+    opacity: 0.42;
+    box-shadow: 2px 5px 10px rgb(16 145 34/ 50%);  
+}
+
+#next-img {
+    width: 20%;
+    height: 20%;
+    margin: 0;
+
+    opacity: 0.80;
+}
+
+#previous-img {
+    width: 20%;
+    height: 20%;
+    margin: 0;
+
+    opacity: 0.80;
+
+    transform: rotate(180deg);
+}
+
+.next:hover, .previous:hover{
+    background-color: rgba(73, 73, 73, 10);
 }
 
 @media (width <= 600px){
@@ -106,6 +157,22 @@ body{
         max-width: 1000px;
         height: 250px;
     }
+    .status{
+        justify-content: center;
+    }
+
+    #button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .next, .previous{
+        width: 48%;
+    
+        font-size: 4vw;
+    }
 }
 
 @media (width <= 420px){
@@ -122,5 +189,22 @@ body{
 
     .container .card:first-of-type{
         margin-top: 100px;
+    }
+
+    .status{
+        justify-content: center;
+    }
+
+    #button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .next, .previous{
+        width: 48%;
+    
+        font-size: 4vw;
     }
 }

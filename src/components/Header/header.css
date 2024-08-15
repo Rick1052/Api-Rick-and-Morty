@@ -3,7 +3,7 @@
 .header {
     display: flex;
     height: 20vw;
-    background-color: #fefefe;
+    background-color: #f0f0f0;
     color: black;
 
     align-items: center;
@@ -16,4 +16,14 @@
     font-size: 4vw;
 
     margin-bottom: 50px;
+}
+
+.header h1{
+    z-index: 1;
+}
+
+.header img{
+    width: 18vw;
+    z-index: 0;
+    position: absolute;
 }
