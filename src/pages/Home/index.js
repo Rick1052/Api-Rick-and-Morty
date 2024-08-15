@@ -11,14 +11,10 @@ function Home() {
     useEffect(() => {
 
         async function loadCards() {
-            const response = await api.get("character", {
-                params: {
-
-                }
-            })
+            const response = await api.get("character")
 
             //console.log(response.data.results.slice(0, 10));
-            setCard(response.data.results.slice(0, 6))
+            setCard(response.data.results.slice(0, 100))
             setLoading(false);
 
         }
@@ -55,7 +51,7 @@ function Home() {
                             <p>Status: {card.status}</p>
                             <p>Specie: {card.species}</p>
 
-                            {/* <Link to={`/filme/${filme.id}`}>Acessar</Link> */}
+
                         </div>
 
                     </div>
