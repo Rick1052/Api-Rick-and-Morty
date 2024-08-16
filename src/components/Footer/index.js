@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './footer.css';
 
-import LogoHenrique from '../../assets/images/logo_henrique.png'
+import LogoHenrique from '../../assets/images/logoHenrique.svg'
 
 function Footer() {
     return (
